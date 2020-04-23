@@ -2,8 +2,7 @@
  * Created by leosamu on 24/9/15.
  */
 paella.dataDelegates.VisualAnnotationsDataDelegate = Class.create(paella.DataDelegate,{
-	read: function(context, params, onSuccess) {	
-	   console.log("socorro");     
+	read: function(context, params, onSuccess) {	 
 	   $.getJSON(params.url + params.id + "/annotations",function(data){
 		              if (typeof(onSuccess)=='function') { onSuccess(data, true); }
        });
